@@ -12,7 +12,7 @@ module "core_code_organization" {
 #}
 
 resource "github_actions_secret" "onepub_token" {
-  repository       = "${github_repository.core_analysis.name}"
+  repository       = module.core_code_organization.repository_name
   secret_name      = "onepub_token"
   plaintext_value  = var.onepub_token
 }
@@ -20,7 +20,7 @@ resource "github_actions_secret" "onepub_token" {
 variable "onepub_token" {}
 
 resource "github_actions_secret" "example_secret" {
-  repository       = "${github_repository.core_analysis.name}"
+  repository       = module.core_code_organization.repository_name
   secret_name      = "example_secret_name"
   plaintext_value  = var.some_secret_string
 }

@@ -13,3 +13,13 @@ variable "repository_visibility" {
   type        = string
   default     = "public"
 }
+
+variable "organization_name" {
+  description = "The name of the organization"
+  type        = string
+}
+
+variable "organization_description" {
+  description = "The description of the organization"
+  type        = string
+}

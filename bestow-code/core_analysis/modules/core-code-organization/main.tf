@@ -1,5 +1,4 @@
-resource "github_repository" "core_analysis" {
-  name        = var.repository_name
-  description = var.repository_description
-  visibility  = var.repository_visibility
+resource "github_organization" "organization" {
+  name        = var.organization_name
+  description = var.organization_description
 }
